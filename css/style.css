@@ -1955,8 +1955,8 @@ box-shadow: 1px 1px 79px -11px rgb(126 150 188);
 }
 .datetime-container {
   /* background-color: #fff; */
-  padding: 20px;
-  border-radius: 8px;
+  /* padding: 20px; */
+  /* border-radius: 8px; */
   /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
   font-size: 14px;
   text-align: center;
