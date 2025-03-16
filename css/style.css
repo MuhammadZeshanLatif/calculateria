@@ -1953,3 +1953,35 @@ box-shadow: 1px 1px 79px -11px rgb(126 150 188);
   background: rgb(255, 163, 26);
   /* background: #03b1ff; */
 }
+.datetime-container {
+  /* background-color: #fff; */
+  padding: 20px;
+  border-radius: 8px;
+  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+}
+
+.datetime-container span {
+  font-weight: bold;
+  color: #0066cc;
+}
+
+.blink {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+      opacity: 0;
+  }
+}
+@media(max-width:992px){
+  .datetime-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  /* gap: 64px; */
+}
+}

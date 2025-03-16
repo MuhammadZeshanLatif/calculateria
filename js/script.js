@@ -172,3 +172,35 @@
   });
 
 })(jQuery);
+function updateDateTime() {
+  const now = new Date();
+
+  // Current date (Day, Month, Year)
+  const day = now.getDate();
+  const month = now.getMonth() + 1;  // Months are zero-indexed
+  const year = now.getFullYear();
+  const dateString = `${day < 10 ? '0' + day : day}/${month < 10 ? '0' + month : month}/${year}`;
+
+  // Current time (HH:MM:SS)
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+
+  // Add leading zero for single-digit hours, minutes, or seconds
+  hours = hours < 10 ? '0' + hours : hours;
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  seconds = seconds < 10 ? '0' + seconds : seconds;
+
+  // Format the time string
+  let timeString = `${hours}<span class="blink">:</span>${minutes}<span class=""> : </span>${seconds}`;
+
+  // Update the current date and time
+  document.getElementById('currentDate').innerText = ` ${dateString}`;
+  document.getElementById('currentTime').innerHTML = timeString;
+}
+
+// Update the date and time every second
+setInterval(updateDateTime, 1000);
+
+// Initial call to display the current date and time immediately
+updateDateTime();
